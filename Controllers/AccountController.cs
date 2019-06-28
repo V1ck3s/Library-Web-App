@@ -52,6 +52,9 @@ namespace Library.Controllers
          
             return View();
         }
+
+        public IActionResult Signin()
+        {
             return View();
         }
     }

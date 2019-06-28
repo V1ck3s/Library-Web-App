@@ -9,16 +9,14 @@ namespace Library.Models
     {
 
         private string title;
-        private string category;
         private string year;
         private Author author;
         private string description;
         private Category categoryBook;
 
-        public Book(string title, string category, string year, Author author, string description, Category categoryBook)
+        public Book(string title, string year, Author author, string description, Category categoryBook)
         {
             this.Title = title;
-            this.Category = category;
             this.Year = year;
             this.Author = author;
             this.Description = description;
@@ -26,7 +24,6 @@ namespace Library.Models
         }
 
         public string Title { get => title; set => title = value; }
-        public string Category { get => category; set => category = value; }
         public string Year { get => year; set => year = value; }
         public Author Author { get => author; set => author = value; }
         public string Description { get => description; set => description = value; }

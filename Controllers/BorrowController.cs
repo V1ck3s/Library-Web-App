@@ -48,7 +48,8 @@ namespace Library.Controllers
             }
 
 
-            return View("~/Views/Account/Index.cshtml");
+            //return View();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

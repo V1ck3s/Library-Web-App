@@ -11,6 +11,7 @@ namespace Library.Controllers
     {
         public IActionResult Index()
         {
+            
             return View(FakeDB.getUser());
         }
 
@@ -34,7 +35,7 @@ namespace Library.Controllers
 
                 }
             }
-            return View("~/Views/Borrow/Index.cshtml");
+            return RedirectToAction(nameof(Index));
         }
     }
 }

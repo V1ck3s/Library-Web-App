@@ -23,13 +23,13 @@ namespace Library.Controllers
             Author a7 = new Author("Van Der Weedenburg", "Faun", "22");
 
 
-            Book b1 = new Book("Purple Ball, The (Lilovyy shar)", "2010", a1, "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.", c1);
-            Book b2 = new Book("Holy Mountain, The (Montaña sagrada, La)", "2004", a2, "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl. Nunc nisl.", c1);
-            Book b3 = new Book("For the Love of Benji", "2001", a3, "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.", c2);
-            Book b4 = new Book("Wall, The (Die Wand)", "2000", a4, "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.", c1);
-            Book b5 = new Book("Cold Comes the Night", "1989", a5, "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.", c2);
-            Book b6 = new Book("Golem, The (Golem, wie er in die Welt kam, Der)", "2013", a6, "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.", c2);
-            Book b7 = new Book("47 Ronin", "1978", a7, "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.", c2);
+            Book b1 = new Book(1,"Purple Ball, The (Lilovyy shar)", "2010", a1, "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.", c1);
+            Book b2 = new Book(2,"Holy Mountain, The (Montaña sagrada, La)", "2004", a2, "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl. Nunc nisl.", c1);
+            Book b3 = new Book(3,"For the Love of Benji", "2001", a3, "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.", c2);
+            Book b4 = new Book(4,"Wall, The (Die Wand)", "2000", a4, "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.", c1);
+            Book b5 = new Book(5,"Cold Comes the Night", "1989", a5, "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.", c2);
+            Book b6 = new Book(6,"Golem, The (Golem, wie er in die Welt kam, Der)", "2013", a6, "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.", c2);
+            Book b7 = new Book(7,"47 Ronin", "1978", a7, "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.", c2);
 
             UserBooks ub1 = new UserBooks(b1, "01/07/2019");
             UserBooks ub2 = new UserBooks(b2, "07/07/2019");
@@ -50,7 +50,7 @@ namespace Library.Controllers
             ViewData["book2"] = u1.UserBooks[1].Book.Title;
             ViewData["book3"] = u1.UserBooks[2].Book.Title;
          
-            return View();
+            return View(u1);
         }
 
         public IActionResult Signin()

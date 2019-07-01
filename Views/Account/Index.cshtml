@@ -1,7 +1,5 @@
 ﻿
-@{
-    ViewData["Title"] = "Index";
-}
+ @model Library.Models.User
 
     <center>
         <a href="/Account/Signin">Sign in</a>
@@ -11,24 +9,27 @@
 
 <h1>Mon compte</h1>
 <p>
-    Nom de famille : @ViewData["lastname"]
+    Nom de famille : @Model.Lastname
     <br>
-    Prénom : @ViewData["firstname"]
+    Prénom : @Model.Firstname
     <br>
-    Age : @ViewData["age"]
+    Age : @Model.Age
     <br>
-    Nom de compte : @ViewData["username"]
+    Nom de compte : @Model.Username
     <br>
 
 </p>
 
 <h1>Livres empruntés :</h1>
 <p>
-    Livre 1 : @ViewData["book1"]
-    <br>
-    Livre 2 : @ViewData["book2"]
-    <br>
-    Livre 3 : @ViewData["book3"]
+    @foreach (var item in Model.UserBooks)
+    {
+
+        @item.Book.Title
+        <br>
+        
+    }
+
 </p>
 
 

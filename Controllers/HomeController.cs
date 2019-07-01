@@ -12,6 +12,8 @@ namespace Library.Controllers
     {
         public IActionResult Index()
         {
+            FakeDB.initDB();
+
             return View();
         }
 

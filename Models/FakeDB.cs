@@ -55,9 +55,17 @@ namespace Library.Models
         {
             userBooks.Add(uB);
         }
-        public static void delUserBooks(UserBooks uB)
+        public static void delUserBooks(Book b)
         {
-            userBooks.Remove(uB);
+            int index = 0;
+            foreach(UserBooks uB in userBooks)
+            {
+                if(uB.Book == b)
+                {
+                    index = userBooks.IndexOf(uB);
+                }
+            }
+            userBooks.RemoveAt(index);
         }
         public static void addUserBooks(Book b)
         {

@@ -30,8 +30,8 @@ namespace Library.Controllers
             {
                 if (b.Id == id)
                 {
-                    UserBooks ub4 = new UserBooks(b, DateTime.Now.ToString());
-                    FakeDB.delUserBooks(ub4);
+                    
+                    FakeDB.delUserBooks(b);
 
                 }
             }

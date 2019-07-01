@@ -1,5 +1,4 @@
-﻿
- @model Library.Models.User
+﻿@model Library.Models.User
 
     <center>
         <a href="/Account/Signin">Sign in</a>
@@ -24,9 +23,14 @@
 <p>
     @foreach (var item in Model.UserBooks)
     {
-
-        @item.Book.Title
+    <p>
+        Titre : @item.Book.Title
         <br>
+        Date d'emprunt : @item.ReturnDate
+        <br>
+        @Html.ActionLink("Rendre", "Rendre", new { id = item.Book.Id })
+    </p>
+        
         
     }
 

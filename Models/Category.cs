@@ -9,6 +9,10 @@ namespace Library.Models
     {
         private string categoryBook;
 
+        public Category()
+        {
+        }
+
         public Category(string categoryBook)
         {
             this.CategoryBook = categoryBook;

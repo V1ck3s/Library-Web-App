@@ -7,31 +7,7 @@
 
 
 
-@section Scripts {
 
-    
-    <script>
-        function search() {
-
-            var research = document.getElementById("search").value.toUpperCase();
-            var tr = document.getElementById("BookList").getElementsByTagName("tr");
-
-
-            for (var i = 0; i < tr.length; i++) {
-                var td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                    var txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(research) > -1) {
-                        tr[i].style.display = "";
-                    }
-                    else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-    </script>
-}
 
 
 <h1>Livres</h1>
@@ -73,3 +49,30 @@
         }
     </tbody>
 </table>
+
+
+@section Scripts {
+
+
+    <script>
+        function search() {
+
+            var research = document.getElementById("search").value.toUpperCase();
+            var tr = document.getElementById("BookList").getElementsByTagName("tr");
+
+
+            for (var i = 0; i < tr.length; i++) {
+                var td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    var txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(research) > -1) {
+                        tr[i].style.display = "";
+                    }
+                    else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+}

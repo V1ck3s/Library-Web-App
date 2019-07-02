@@ -12,6 +12,10 @@ namespace Library.Models
         private string firstname;
         private string age;
 
+        public Author()
+        {
+        }
+
         public Author(string lastname, string firstname, string age)
         {
             this.Lastname = lastname;

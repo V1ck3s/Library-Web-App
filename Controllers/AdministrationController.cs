@@ -111,8 +111,8 @@ namespace Library.Controllers
                 
                 string descriptionB = collection["Description"];
                 
-                Author author1 = new Author("","","");
-                Category category1 = new Category("");
+                Author author1 = new Author();
+                Category category1 = new Category();
                 foreach(Author a in FakeDB.getAuthorList())
                 {
                     if(a.Lastname == collection["Author.Lastname"])

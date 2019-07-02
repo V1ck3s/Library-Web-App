@@ -37,6 +37,10 @@ namespace Library.Models
 
         static List<Book> listBooks = new List<Book>();
 
+        static List<Author> listAuthor = new List<Author>();
+        static List<Category> listCategory = new List<Category>();
+
+
         public static void initDB()
         {
             userBooks.Add(ub1);
@@ -50,6 +54,18 @@ namespace Library.Models
             listBooks.Add(b5);
             listBooks.Add(b6);
             listBooks.Add(b7);
+
+            listAuthor.Add(a1);
+            listAuthor.Add(a2);
+            listAuthor.Add(a3);
+            listAuthor.Add(a4);
+            listAuthor.Add(a5);
+            listAuthor.Add(a6);
+            listAuthor.Add(a7);
+
+            listCategory.Add(c1);
+            listCategory.Add(c2);
+
         }
         public static void addUserBooks(UserBooks uB)
         {
@@ -83,6 +99,38 @@ namespace Library.Models
         public static User getUser()
         {
             return u1;
+        }
+        public static void deleteBook(int? id)
+        {
+            
+            foreach (Book b in listBooks)
+            {
+                int index = 0;
+                if (b.Id == id)
+                {
+                    index = listBooks.IndexOf(b);
+                    listBooks.Remove(b);
+                    break;
+                }
+                
+            }
+            
+        }
+
+        public static void addBook(Book b)
+        {
+            listBooks.Add(b);
+
+        }
+
+        public static List<Author> getAuthorList()
+        {
+            return listAuthor;
+        }
+
+        public static List<Category> getCategoryList()
+        {
+            return listCategory;
         }
     }
     
